@@ -84,18 +84,33 @@
 .login__button {
   width: 100%;
   padding: 0.75rem;
-  background-color: var(--accent-color);
-  border: 1px solid var(--accent-color);
+  background-color: #000000;
+  border: 2px solid #000000;
   border-radius: 6px;
   font-size: 1rem;
   font-weight: 600;
-  color: var(--bg-primary);
+  color: var(--accent-color);
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .login__button:hover {
-  background-color: var(--accent-hover);
+  background-color: var(--accent-color);
+  color: #000000;
+  border-color: var(--accent-color);
+}
+
+/* Dark mode button styling */
+.dark-mode .login__button {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: #000000;
+}
+
+.dark-mode .login__button:hover {
+  background-color: #000000;
+  color: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 /* ==== OAuth Icons Row ==== */
@@ -108,23 +123,34 @@
 
 .oauth-icon-btn {
   background: transparent;
-  border: none;
+  border: 1px solid var(--border-color);
   cursor: pointer;
-  padding: 0.4rem;
+  padding: 0.8rem;
   border-radius: 50%;
-  transition: background-color 0.2s ease;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .oauth-icon-btn:hover {
-  background-color: #efefef;
+  background-color: var(--bg-tertiary);
+  border-color: var(--accent-color);
+  transform: scale(1.05);
+}
+
+/* Dark mode OAuth button styling */
+.dark-mode .oauth-icon-btn:hover {
+  background-color: var(--bg-tertiary);
 }
 
 /* ==== Divider between login methods ==== */
 .oauth__divider {
   text-align: center;
-  margin: 1rem 0;
+  margin: 1.5rem 0;
   font-size: 0.85rem;
-  color: #999;
+  color: var(--text-secondary);
+  font-weight: 500;
 }
 
 /* ==== Other Actions ==== */
@@ -137,19 +163,33 @@
 .login__forgot__password,
 .login__new__account {
   font-size: 0.9rem;
-  color: var(--accent-color);
+  color: #000000;
   text-decoration: none;
   cursor: pointer;
+  font-weight: 500;
 }
 
 .login__forgot__password:hover,
 .login__new__account a:hover {
+  color: var(--accent-hover);
   text-decoration: underline;
+}
+
+/* Dark mode link styling */
+.dark-mode .login__forgot__password,
+.dark-mode .login__new__account {
+  color: var(--accent-color);
+}
+
+.dark-mode .login__forgot__password:hover,
+.dark-mode .login__new__account a:hover {
+  color: #ffffff;
 }
 
 /* ==== New Account Link Inherit Style ==== */
 .login__new__account a {
   color: inherit;
   text-decoration: none;
+  font-weight: 600;
 }
 

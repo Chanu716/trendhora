@@ -62,7 +62,6 @@ const Login = () => {
           <button className="oauth-icon-btn" onClick={() => handleOAuthLogin('github')}>
             <FaGithub size={30} />
           </button>
-
         </div>
 
         <div className="oauth__divider">
